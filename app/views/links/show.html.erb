@@ -1,0 +1,15 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th>URL</th>
+    <th>token</th>
+    <th>info</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><a href="<%=  @link.url %>"><%=  @link.url %></a></td>
+      <td class="anchor" onclick="onClickTokenHandler('<%=  @link.token %>')"><%=  @link.token %></td>
+      <td class="anchor" onclick="onClickTokenHandler('<%=  @link.token %>/info')">info</td>
+    </tr>
+  </tbody>
+</table>

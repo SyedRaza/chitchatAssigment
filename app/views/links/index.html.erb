@@ -1,0 +1,27 @@
+<h5>Links <%= @links.length %></h5 >
+
+<ul>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>id</th>
+      <th>URL</th>
+      <th>token</th>
+      <th>info</th>
+    </tr></thead>
+    <tbody>
+    <% @links.each do |link| %>
+      <tr>
+        <td><a href="/links/<%= link.id %>">
+          <%= link.id %>
+        </a></td>
+        <td><a href="<%=  link.url %>"><%=  link.url %></a></td>
+        <td class="anchor" onclick="onClickTokenHandler('<%=  link.token %>')"><%=  link.token %></td>
+        <td class="anchor" onclick="onClickTokenHandler('<%=  link.token %>/info')">info</td>
+      </tr>
+    <% end %>
+
+
+      </tbody>
+  </table>
+</ul>
